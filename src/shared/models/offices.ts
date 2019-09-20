@@ -1,8 +1,13 @@
-export type Offices = {
+export type OfficeSearch = {
+  count: number,
+  data: Array<Office>
+}
+
+export type Office = {
   name: string
   description: string
   employees_count: number
-  open_date: Date
+  open_date: string
   location: Location
   remote_available: boolean
   image_url: string

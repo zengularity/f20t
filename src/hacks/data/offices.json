@@ -12,7 +12,7 @@
         "address": "rue de Saint Lazare",
         "postal_code": "75009",
         "country": "France",
-        "languagae": ["fr","en"]
+        "language": ["fr","en"]
       },
       "remote_available": true,
       "image_url": "images/paris.jpg"
@@ -28,7 +28,7 @@
         "address": "rue de Crucy",
         "postal_code": "44100",
         "country": "France",
-        "languagae": ["fr","en"]
+        "language": ["fr","en"]
       },
       "remote_available": true,
       "image_url": "images/nantes.jpg"
@@ -38,18 +38,16 @@
       "description": "A lyon tout est bon",
       "employees_count": 30,
       "open_date": "20/10/2019",
-      "location": "Lyon",
+      "location": {
+        "city": "Lyon",
+        "number": "34",
+        "address": "34 Rue Verlet Hanus",
+        "postal_code": "69003",
+        "country": "France",
+        "language": ["fr","en"]
+      },
       "remote_available": false,
       "image_url": "images/lyon.jpg"
-    },
-    {
-      "name": "Fabernovel Lyon",
-      "description": "A lyon tout est bon",
-      "employees_count": 30,
-      "open_date": "20/10/2019",
-      "location": "Bordeaux",
-      "remote_available": false,
-      "image_url": "images/bordeau.jpg"
     }
   ]
 }
