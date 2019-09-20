@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './list.module.scss';
-import offices from '../../shared/api/offices';
+import {offices} from '../../shared/api/offices'
 import ListItem from './listItem';
 
 

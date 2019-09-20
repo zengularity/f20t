@@ -33,7 +33,7 @@ const ListItem: React.FC<Props> = ({data}) => {
             {(data.location) &&
               <>
               <LanguageIcon />
-              {data.location.languages.map((lang, index, tab) => 
+              {data.location.language.map((lang, index, tab) => 
               `${lang} ${(index+1 < tab.length) ? ' / ' : ''}`
               )
               }

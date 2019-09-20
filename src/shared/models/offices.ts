@@ -1,9 +1,14 @@
+export type OfficeSearch = {
+  count: number,
+  data: Array<Offices>
+}
+
 export type Offices = {
   name: string
   description: string
   employees_count: number
   open_date: string
-  location?: Location
+  location: Location
   remote_available: boolean
   image_url: string
 }
@@ -14,5 +19,5 @@ export type Location = {
   address: string
   postal_code: string
   country: string
-  languages: string[]
+  language: string[]
 }
