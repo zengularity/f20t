@@ -11,12 +11,9 @@ const Sort = ({ direction = "asc", onClick }: Props) => {
   const src = direction === "desc" ? IconDesc : IconAsc;
 
   return (
-    <img
-      src={src}
-      onClick={onClick}
-      className={styles.sort}
-      alt={`sort by ${direction}`}
-    />
+    <button className={styles.sortButton}>
+      <img src={src} onClick={onClick} alt={`sort by ${direction}`} />
+    </button>
   );
 };
 
