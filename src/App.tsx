@@ -23,10 +23,18 @@ class App extends React.Component<{}, AppState> {
       .then(offices => this.setState({ offices }))
   }
 
+  handleSearch = (query: string) => {
+    const queryString = query.length > 0 ? `?query=${query}` : ''
+
+    fetch(`http://fake.fabernovel.com/api/offices${queryString}`)
+      .then(r => r.json())
+      .then(offices => this.setState({ offices }))
+  }
+
   render() {
     return (
       <div className={styles.app}>
-        <Header />
+        <Header onSearchSubmit={this.handleSearch} />
         <OfficeList offices={this.state.offices} />
       </div>
     );

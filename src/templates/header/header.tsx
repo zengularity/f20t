@@ -3,11 +3,14 @@ import styles from './header.module.css';
 import Logo from "../logo"
 import SearchInput from "../search-input"
 
-const Header = () => {
+type Props = {
+  onSearchSubmit: (query: string) => void
+}
+const Header = ({ onSearchSubmit }: Props) => {
   return <div className={styles.header}>
     <Logo />
     <div className={styles.headerSearchbar}>
-      <SearchInput />
+      <SearchInput onSubmit={onSearchSubmit} />
     </div>
   </div>
 }
