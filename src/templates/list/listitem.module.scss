@@ -1,6 +1,8 @@
 @import "../../styles/variables.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #000000;
   border-bottom-width: 3px;
   flex: 1;
@@ -8,6 +10,10 @@
 }
 
 .bottomDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: $m-size;
 }
 
@@ -34,10 +40,13 @@
 
 .row {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .locationText {
   font-size: $s-size;
   vertical-align: middle;
+  &-margin {
+    margin-right: 10px;
+  }
 }
