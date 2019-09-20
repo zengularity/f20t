@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './searchbar.module.css';
+import styles from './searchbar.module.scss';
 
 export interface ISearchbarProps {
 }
@@ -22,8 +22,8 @@ export default class Searchbar extends React.Component<ISearchbarProps, ISearchb
   }
   public render() {
     return (
-      <div className={styles.searchbar}>
-        <input className={styles.searchbarInput} type="text" name="search" value={this.state.textSearch} onChange={this.handleSearchChange} />
+      <div className={styles.container}>
+        <input className={styles.input} type="text" name="search" value={this.state.textSearch} onChange={this.handleSearchChange} />
       </div>
     );
   }

@@ -2,8 +2,8 @@ export type Offices = {
   name: string
   description: string
   employees_count: number
-  open_date: Date
-  location: Location
+  open_date: string
+  location?: Location
   remote_available: boolean
   image_url: string
 }
@@ -14,5 +14,5 @@ export type Location = {
   address: string
   postal_code: string
   country: string
-  language: string[]
+  languages: string[]
 }
