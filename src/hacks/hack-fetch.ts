@@ -30,7 +30,7 @@ type FakeResponse = {
 
 const fakeResponses: Array<FakeResponse> = [
   {
-    test: isApi('offices', 'GET', 'query'),
+    test: isApi('offices', 'GET'),
     async handler(url) {
       await sleep()
       const  { query } = qs.parse(new window.URL(url).search) as { query?: string }
