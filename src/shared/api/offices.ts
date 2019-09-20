@@ -1,4 +1,4 @@
-{
+export const offices = {
   "count": 5,
   "data": [
     {

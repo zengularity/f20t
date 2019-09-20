@@ -1,11 +1,13 @@
 import React from 'react';
-import styles from './app.module.css';
+import './styles/global.scss'
+import styles from './app.module.scss';
 import Searchbar from './templates/searchbar/searchbar';
 import List from './templates/list/list';
 
+
 const App: React.FC = () => {
   return (
-    <div className={styles.app}>
+    <div className={styles.container}>
       <Searchbar />
       <List />
     </div>
