@@ -1,18 +1,19 @@
 import * as React from 'react';
 import styles from './list.module.scss';
-import {offices} from '../../shared/api/offices'
 import ListItem from './listItem';
+import {OfficeSearch} from '../../shared/models/offices';
 
 
-export interface IListProps {
+export interface ListProps {
+  offices: OfficeSearch
 }
 
-export default class Searchbar extends React.Component<IListProps> {
-  public render() {
+export default class OfficeList extends React.Component<ListProps> {
+  render() {
     return (
       <div className={styles.row}>
         {
-          offices.data.map(
+          this.props.offices.data.map(
             (item, index) => <ListItem key={`listItem${index}`} data={item} />
           )
         }

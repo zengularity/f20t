@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { Offices } from '../../shared/models/offices';
+import { Office } from '../../shared/models/offices';
 import styles from './listitem.module.scss'
 import { ReactComponent as LocationIcon } from '../../styles/icons/location-icon.svg';
 import { ReactComponent as LanguageIcon } from '../../styles/icons/language-icon.svg';
 import { ReactComponent as EmployesIcon } from '../../styles/icons/employes-icon.svg';
+
 type Props = {
-  data: Offices
+  data: Office
 }
 
 const ListItem: React.FC<Props> = ({data}) => {
@@ -33,7 +34,7 @@ const ListItem: React.FC<Props> = ({data}) => {
             {(data.location) &&
               <>
               <LanguageIcon />
-              {data.location.language.map((lang, index, tab) => 
+              {data.location.language.map((lang, index, tab) =>
               `${lang} ${(index+1 < tab.length) ? ' / ' : ''}`
               )
               }

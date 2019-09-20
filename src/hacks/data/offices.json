@@ -3,7 +3,7 @@
   "data": [
     {
       "name": "Fabernovel Paris",
-      "description": "Au 46 tout est neuf, et les filles sont très jolies",
+      "description": "Situé dans le 9e arrondissement, le 46 est un nouveau batiment.",
       "employees_count": 350,
       "open_date": "01/06/2019",
       "location": {
@@ -41,7 +41,7 @@
       "location": {
         "city": "Lyon",
         "number": "34",
-        "address": "34 Rue Verlet Hanus",
+        "address": "Rue Verlet Hanus",
         "postal_code": "69003",
         "country": "France",
         "language": ["fr","en"]

@@ -1,9 +1,9 @@
 export type OfficeSearch = {
   count: number,
-  data: Array<Offices>
+  data: Array<Office>
 }
 
-export type Offices = {
+export type Office = {
   name: string
   description: string
   employees_count: number
