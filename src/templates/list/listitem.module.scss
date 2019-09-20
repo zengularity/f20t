@@ -1,19 +1,22 @@
 @import "../../styles/variables.scss";
 
+.item {
+  padding-right: $xs-size;
+  padding-bottom: $m-size;
+  width: 50%;
+  &:nth-child(even) {
+    padding-left: $xs-size;
+    padding-right: 0;
+  }
+
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
   border: 1px solid #000000;
   border-bottom-width: 3px;
-  flex: 1;
-  margin: 0 10px 10px 10px;
 }
 
 .bottomDescription {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
   padding: $m-size;
 }
 
@@ -46,7 +49,4 @@
 .locationText {
   font-size: $s-size;
   vertical-align: middle;
-  &-margin {
-    margin-right: 10px;
-  }
 }
