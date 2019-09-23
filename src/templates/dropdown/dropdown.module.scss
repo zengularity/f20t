@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  min-width: 120px;
+  text-align: right;
+}
+
+.selector {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.chevronIcon{
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.list {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  border: 1px solid #000;
+  background-color: #FFF;
+}
+
+.item {
+  padding: 5px 10px;
+  cursor: pointer;
+  &:hover{
+    background-color: #CCE8FF
+  }
+}

@@ -1,25 +1,30 @@
-import React from "react";
-import styles from "./header.module.css";
-import Logo from "../logo";
+import React from "react"
+import styles from "./header.module.css"
+import Logo from "../logo"
 import SearchInput from "../search-input";
-import Sort from "../sort";
+import Dropdown from "../dropdown/dropdown"
+import {Continent} from "../../shared/models/offices"
+import Sort from "../sort"
 
-type Props = {
-  onSearchSubmit: (query: string) => void;
-  sort: "asc" | "desc";
-  onSortToggle: () => void;
-};
+export type props = {
+  continentList: Continent[]
+  continentSelected: Continent
+  onChangeContinent: (continent: Continent) => void
+  onSearchSubmit: (query: string) => void
+  sort: "asc" | "desc"
+  onSortToggle: () => void
+}
 
-const Header = ({ onSearchSubmit, sort, onSortToggle }: Props) => {
-  return (
-    <div className={styles.header}>
-      <Logo />
-      <div className={styles.headerSearchbar}>
-        <SearchInput onSubmit={onSearchSubmit} />
-      </div>
-      <Sort direction={sort} onClick={onSortToggle} />
+const Header:React.FC<props> = ({continentList, continentSelected, onChangeContinent, onSearchSubmit, sort, onSortToggle}) => {
+  
+  return <div className={styles.header}>
+    <Logo />
+    <div className={styles.headerSearchbar}>
+      <SearchInput onSubmit={onSearchSubmit} />
     </div>
-  );
-};
+    <Dropdown continentSelected={continentSelected} onChangeContinent={onChangeContinent} continentList={continentList} />
+    <Sort direction={sort} onClick={onSortToggle} />
+  </div>
+}
 
 export default Header;

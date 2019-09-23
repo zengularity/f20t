@@ -24,14 +24,14 @@ const ListItem: React.FC<Props> = ({data}) => {
                   <LocationIcon />
                   <div>
                     <p className={styles.locationText}>{data.location.number} {data.location.address}</p>
-                    <p className={styles.locationText}>{data.location.postal_code}</p>
+                    <p className={styles.locationText}>{data.location.postal_code} {data.location.city}</p>
                   </div>
                 </div>
               }
             </div>
-            <div>
+            <div className={styles.row}>
               <span className={styles.locationText}><EmployesIcon /> {data.employees_count}</span>
-              <span style={{marginLeft: "5px"}} className={styles.locationText}>
+              <span className={ `${styles.locationText} ${styles.locationText_withMargin}` }>
               {(data.location) &&
                 <>
                 <LanguageIcon />
