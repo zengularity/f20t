@@ -1,7 +1,7 @@
 export type OfficeSearch = {
-  count: number,
-  data: Array<Office>
-}
+  count: number;
+  data: ReadonlyArray<Office>;
+};
 
 export type Continent = {
   label: string
@@ -9,14 +9,14 @@ export type Continent = {
 }
 
 export type Office = {
-  name: string
-  description: string
-  employees_count: number
-  open_date: string
-  location: Location
-  remote_available: boolean
-  image_url: string
-}
+  name: string;
+  description: string;
+  employees_count: number;
+  open_date: string;
+  location: Location;
+  remote_available: boolean;
+  image_url: string;
+};
 
 export type Location = {
   city: string

@@ -5,9 +5,11 @@ import Header from './templates/header'
 import OfficeList from './templates/list/list';
 import { OfficeSearch, Continent, Office } from './shared/models/offices';
 
+type Sort = "asc" | "desc";
 type AppState = {
   offices: OfficeSearch
   continentSelected: Continent
+  sort: Sort
 }
 
 class App extends React.Component<{}, AppState> {
@@ -20,7 +22,8 @@ class App extends React.Component<{}, AppState> {
     continentSelected: {
       key: "",
       label: "World"
-    }
+    },
+    sort: "asc"
   } as AppState
   
   
@@ -61,17 +64,36 @@ class App extends React.Component<{}, AppState> {
     })
   }
 
+  handleSearch = (query: string) => {
+    const queryString = query.length > 0 ? `?query=${query}` : "";
+
+    fetch(`http://fake.fabernovel.com/api/offices${queryString}`)
+      .then(r => r.json())
+      .then(offices => this.setState({ offices }));
+  };
+
+  handleSort = () => {
+    this.setState(state => ({
+      ...state,
+      sort: state.sort === "desc" ? "asc" : "desc"
+    }));
+  };
+
   render() {
     
     if(this.state.offices.data && this.state.offices.data.length === 0)
       return <p>Loading</p>
     return (
       <div className={styles.app}>
-        <Header continentSelected={this.state.continentSelected} 
+        <Header
+          sort={this.state.sort}
+          onSortToggle={this.handleSort}
+          onSearchSubmit={this.handleSearch}
+          continentSelected={this.state.continentSelected} 
           onChangeContinent={this.onChangeContinent} 
           continentList={this.getContinentList(this.initialList)}
         />
-        <OfficeList offices={this.state.offices} />
+        <OfficeList offices={this.state.offices} sort={this.state.sort} />
       </div>
     );
   }

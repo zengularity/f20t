@@ -8,7 +8,13 @@ function searchOffices(offices: OfficeSearch, query: string): OfficeSearch {
     }
   } else {
     const data = offices.data.filter(office => {
-      return office.location.city.includes(query) || office.location.address.includes(query) || office.description.includes(query)
+      const searchParams = [
+        office.location.city,
+        office.location.address,
+        office.description
+      ]
+
+      return searchParams.some(param => param.toLowerCase().includes(query))
     })
 
     return {
