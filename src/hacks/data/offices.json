@@ -56,8 +56,7 @@
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/lyon.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Bordeaux",
@@ -76,8 +75,7 @@
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/bordeaux.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Toulouse",
@@ -96,8 +94,7 @@
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/toulouse.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Lisbonne",
@@ -116,8 +113,7 @@
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/lisbonne.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel San Francisco",
@@ -136,8 +132,7 @@
           "key": "amerique"
         }
       },
-      "remote_available": false,
-      "image_url": "images/sanfrancisco.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Shanghai",
@@ -156,8 +151,7 @@
           "key": "asie"
         }
       },
-      "remote_available": false,
-      "image_url": "images/shanghai.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Singapour",
@@ -176,8 +170,7 @@
           "key": "asie"
         }
       },
-      "remote_available": false,
-      "image_url": "images/singapore.jpg"
+      "remote_available": false
     }
   ]
 }

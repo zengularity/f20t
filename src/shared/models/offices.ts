@@ -1,12 +1,12 @@
 export type OfficeSearch = {
   count: number;
-  data: ReadonlyArray<Office>;
+  data: Array<Office>;
 };
 
 export type Continent = {
-  label: string
-  key: string
-}
+  label: string;
+  key: string;
+};
 
 export type Office = {
   name: string;
@@ -18,11 +18,11 @@ export type Office = {
 };
 
 export type Location = {
-  city: string
-  number: string
-  address: string
-  postal_code: string
-  country: string
-  language: string[]
-  continent: Continent
-}
+  city: string;
+  number: string;
+  address: string;
+  postal_code: string;
+  country: string;
+  language: string[];
+  continent: Continent;
+};
