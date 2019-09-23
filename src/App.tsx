@@ -5,14 +5,10 @@ import Header from "./templates/header";
 import OfficeList from "./templates/list/list";
 
 class App extends React.Component<{}, {}> {
-  handleSearch = (query: string) => {
-    console.log({ query });
-  };
-
   render() {
     return (
       <div className={styles.app}>
-        <Header onSearchSubmit={this.handleSearch} />
+        <Header />
         <OfficeList />
       </div>
     );
