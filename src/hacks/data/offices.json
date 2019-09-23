@@ -3,7 +3,7 @@
   "data": [
     {
       "name": "Fabernovel Paris",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 350,
       "open_date": "01/06/2019",
       "location": {
@@ -12,18 +12,17 @@
         "address": "rue de Saint Lazare",
         "postal_code": "75009",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": true,
-      "image_url": "images/paris.jpg"
+      "remote_available": true
     },
     {
       "name": "Fabernovel Nantes",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 8,
       "open_date": "01/09/2013",
       "location": {
@@ -32,18 +31,17 @@
         "address": "rue de Crucy",
         "postal_code": "44100",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": true,
-      "image_url": "images/nantes.jpg"
+      "remote_available": true
     },
     {
       "name": "Fabernovel Lyon",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 30,
       "open_date": "20/10/2019",
       "location": {
@@ -52,18 +50,17 @@
         "address": "rue Verlet Hanus",
         "postal_code": "69003",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/lyon.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Bordeaux",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 20,
       "open_date": "20/10/2018",
       "location": {
@@ -72,18 +69,17 @@
         "address": "rue Jardin de l'Ars",
         "postal_code": "33800",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/bordeaux.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Toulouse",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/07/2018",
       "location": {
@@ -92,18 +88,17 @@
         "address": "rue des Filatiers",
         "postal_code": "31000",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/toulouse.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Lisbonne",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/10/2016",
       "location": {
@@ -118,12 +113,11 @@
           "key": "europe"
         }
       },
-      "remote_available": false,
-      "image_url": "images/lisbonne.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel San Francisco",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 3,
       "open_date": "20/10/2019",
       "location": {
@@ -138,12 +132,11 @@
           "key": "amerique"
         }
       },
-      "remote_available": false,
-      "image_url": "images/sanfrancisco.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Shanghai",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/10/2019",
       "location": {
@@ -152,34 +145,32 @@
         "address": "Yu Yuan Road",
         "postal_code": "2000050",
         "country": "China",
-        "language": ["cn","en"],
+        "language": ["cn", "en"],
         "continent": {
           "label": "Asie",
           "key": "asie"
         }
       },
-      "remote_available": false,
-      "image_url": "images/shanghai.jpg"
+      "remote_available": false
     },
     {
       "name": "Fabernovel Singapour",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 7,
       "open_date": "20/05/2015",
       "location": {
-        "city": "Singapor",
+        "city": "Singapour",
         "number": "1",
         "address": "North Bridge Road",
         "postal_code": "CA 0431",
         "country": "",
-        "language": ["cn","en"],
+        "language": ["cn", "en"],
         "continent": {
           "label": "Asie",
           "key": "asie"
         }
       },
-      "remote_available": false,
-      "image_url": "images/singapore.jpg"
+      "remote_available": false
     }
   ]
 }

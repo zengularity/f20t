@@ -1,19 +1,19 @@
-import React from 'react';
-import './styles/global.scss'
-import styles from './app.module.scss';
-import Header from './templates/header'
-import OfficeList from './templates/list/list';
-import { OfficeSearch, Continent, Office } from './shared/models/offices';
+import React from "react";
+import "./styles/global.scss";
+import styles from "./app.module.scss";
+import Header from "./templates/header";
+import OfficeList from "./templates/list/list";
+import { OfficeSearch, Continent, Office } from "./models/offices";
 
 type Sort = "asc" | "desc";
 type AppState = {
-  offices: OfficeSearch
-  continentSelected: Continent
-  sort: Sort
-}
+  offices: OfficeSearch;
+  continentSelected: Continent;
+  sort: Sort;
+};
 
 class App extends React.Component<{}, AppState> {
-  initialList: any
+  initialList: any;
   state = {
     offices: {
       count: 0,
@@ -24,45 +24,50 @@ class App extends React.Component<{}, AppState> {
       label: "World"
     },
     sort: "asc"
-  } as AppState
-  
-  
+  } as AppState;
 
   getContinentList = (offices: OfficeSearch) => {
     const continentList = offices.data.map((office: Office) => {
-      return office.location.continent
-    })
-    return [...continentList, {
-      key: "*",
-      label: "World"
-    }
-    ]
-  }
+      return office.location.continent;
+    });
+
+    return [
+      {
+        key: "*",
+        label: "World"
+      },
+      ...continentList.filter((continent, index) => {
+        return (
+          continentList.findIndex(
+            continentObject => continentObject.key === continent.key
+          ) === index
+        );
+      })
+    ];
+  };
 
   componentDidMount() {
     fetch("http://fake.fabernovel.com/api/offices")
       .then(r => r.json())
       .then(offices => {
         this.initialList = offices;
-        this.setState({ offices })
-      })
+        this.setState({ offices });
+      });
   }
 
   onChangeContinent = (continent: Continent) => {
+    const officesFiltered = this.initialList.data.filter((office: Office) => {
+      return office.location.continent.key === continent.key;
+    });
 
-    const officesFiltered = this.initialList.data.filter((office:Office) => {
-      return office.location.continent.key === continent.key
-    })
-    
-    
     this.setState({
       continentSelected: continent,
       offices: {
         count: officesFiltered.length,
-        data: (continent.key !== "*") ? officesFiltered : this.initialList.data
+        data: continent.key !== "*" ? officesFiltered : this.initialList.data
       }
-    })
-  }
+    });
+  };
 
   handleSearch = (query: string) => {
     const queryString = query.length > 0 ? `?query=${query}` : "";
@@ -80,17 +85,16 @@ class App extends React.Component<{}, AppState> {
   };
 
   render() {
-    
-    if(this.state.offices.data && this.state.offices.data.length === 0)
-      return <p>Loading</p>
+    if (this.state.offices.data && this.state.offices.data.length === 0)
+      return <p>Loading</p>;
     return (
       <div className={styles.app}>
         <Header
           sort={this.state.sort}
           onSortToggle={this.handleSort}
           onSearchSubmit={this.handleSearch}
-          continentSelected={this.state.continentSelected} 
-          onChangeContinent={this.onChangeContinent} 
+          continentSelected={this.state.continentSelected}
+          onChangeContinent={this.onChangeContinent}
           continentList={this.getContinentList(this.initialList)}
         />
         <OfficeList offices={this.state.offices} sort={this.state.sort} />

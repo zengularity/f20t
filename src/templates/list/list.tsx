@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./list.module.scss";
 import ListItem from "./listItem";
-import { OfficeSearch } from "../../shared/models/offices";
+import { OfficeSearch } from "../../models/offices";
 
 export interface ListProps {
   offices: OfficeSearch;
