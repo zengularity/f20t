@@ -29,11 +29,7 @@ class App extends React.Component<{}, AppState> {
   }
 
   handleSearch = (query: string) => {
-    const queryString = query.length > 0 ? `?query=${query}` : "";
-
-    fetch(`http://fake.fabernovel.com/api/offices${queryString}`)
-      .then(r => r.json())
-      .then(offices => this.setState({ offices }));
+    console.log({ query });
   };
 
   handleSort = () => {

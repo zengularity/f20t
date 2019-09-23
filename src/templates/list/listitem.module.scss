@@ -1,14 +1,7 @@
 @import "../../styles/variables.scss";
 
 .item {
-  padding-right: $xs-size;
-  padding-bottom: $m-size;
-  width: 50%;
-  &:nth-child(even) {
-    padding-left: $xs-size;
-    padding-right: 0;
-  }
-
+  padding-bottom: $xs-size;
 }
 
 .container {
