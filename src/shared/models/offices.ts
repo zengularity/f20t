@@ -15,7 +15,6 @@ export type Office = {
   open_date: string;
   location: Location;
   remote_available: boolean;
-  image_url: string;
 };
 
 export type Location = {

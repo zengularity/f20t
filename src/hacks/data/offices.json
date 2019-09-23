@@ -12,14 +12,13 @@
         "address": "rue de Saint Lazare",
         "postal_code": "75009",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": true,
-      "image_url": "images/paris.jpg"
+      "remote_available": true
     },
     {
       "name": "Fabernovel Nantes",
@@ -32,14 +31,13 @@
         "address": "rue de Crucy",
         "postal_code": "44100",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
         }
       },
-      "remote_available": true,
-      "image_url": "images/nantes.jpg"
+      "remote_available": true
     },
     {
       "name": "Fabernovel Lyon",
@@ -52,7 +50,7 @@
         "address": "rue Verlet Hanus",
         "postal_code": "69003",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
@@ -72,7 +70,7 @@
         "address": "rue Jardin de l'Ars",
         "postal_code": "33800",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
@@ -92,7 +90,7 @@
         "address": "rue des Filatiers",
         "postal_code": "31000",
         "country": "France",
-        "language": ["fr","en"],
+        "language": ["fr", "en"],
         "continent": {
           "label": "Europe",
           "key": "europe"
@@ -152,7 +150,7 @@
         "address": "Yu Yuan Road",
         "postal_code": "2000050",
         "country": "China",
-        "language": ["cn","en"],
+        "language": ["cn", "en"],
         "continent": {
           "label": "Asie",
           "key": "asie"
@@ -172,7 +170,7 @@
         "address": "North Bridge Road",
         "postal_code": "CA 0431",
         "country": "",
-        "language": ["cn","en"],
+        "language": ["cn", "en"],
         "continent": {
           "label": "Asie",
           "key": "asie"
