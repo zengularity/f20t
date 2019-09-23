@@ -39,6 +39,9 @@
 
 .address {
   display: flex;
+  svg {
+    margin-right: 5px;
+  }
 }
 
 .row {
@@ -48,5 +51,12 @@
 
 .locationText {
   font-size: $s-size;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 5px;
+  }
+  &_withMargin {
+    margin-left: $l-size;
+  }
 }
