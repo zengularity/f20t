@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Office } from "../../shared/models/offices";
+import { Office } from "../../models/offices";
 import styles from "./listitem.module.scss";
 import getCityPhoto from "../../images";
 import { ReactComponent as LocationIcon } from "../../styles/icons/location-icon.svg";

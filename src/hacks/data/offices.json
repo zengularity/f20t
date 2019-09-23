@@ -3,7 +3,7 @@
   "data": [
     {
       "name": "Fabernovel Paris",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 350,
       "open_date": "01/06/2019",
       "location": {
@@ -22,7 +22,7 @@
     },
     {
       "name": "Fabernovel Nantes",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 8,
       "open_date": "01/09/2013",
       "location": {
@@ -41,7 +41,7 @@
     },
     {
       "name": "Fabernovel Lyon",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 30,
       "open_date": "20/10/2019",
       "location": {
@@ -60,7 +60,7 @@
     },
     {
       "name": "Fabernovel Bordeaux",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 20,
       "open_date": "20/10/2018",
       "location": {
@@ -79,7 +79,7 @@
     },
     {
       "name": "Fabernovel Toulouse",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/07/2018",
       "location": {
@@ -98,7 +98,7 @@
     },
     {
       "name": "Fabernovel Lisbonne",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/10/2016",
       "location": {
@@ -117,7 +117,7 @@
     },
     {
       "name": "Fabernovel San Francisco",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 3,
       "open_date": "20/10/2019",
       "location": {
@@ -136,7 +136,7 @@
     },
     {
       "name": "Fabernovel Shanghai",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 5,
       "open_date": "20/10/2019",
       "location": {
@@ -155,11 +155,11 @@
     },
     {
       "name": "Fabernovel Singapour",
-      "description": "Lorem ipsum",
+      "description": "Cupcake ipsum dolor sit amet marzipan caramels dragée. I love muffin croissant jelly chupa chups I love. Candy canes tiramisu marzipan jelly icing sugar plum I love gummies muffin.",
       "employees_count": 7,
       "open_date": "20/05/2015",
       "location": {
-        "city": "Singapor",
+        "city": "Singapour",
         "number": "1",
         "address": "North Bridge Road",
         "postal_code": "CA 0431",
