@@ -10,7 +10,7 @@ export interface ListProps {
 
 export default class OfficeList extends React.Component<ListProps> {
   render() {
-    const data = this.props.offices.data.sort((office1, office2) => {
+    const data = this.props.offices.data.slice().sort((office1, office2) => {
       if (this.props.sort === "asc") {
         return office1.location.city.localeCompare(office2.location.city);
       } else {
