@@ -1,3 +1,52 @@
+## Fonctionnement de l’API :
+
+L’application utilise une fake api accessible directement depuis le front-end à l’url suivante : http://fake.fabernovel.com/api/
+
+
+Elle expose une unique route :
+
+## `GET /offices`
+Liste tous les bureaux de Fabernovel dans le monde
+
+***Query String***
+
+query  (optional string)
+
+***Exemple :***
+
+http://fake.fabernovel.com/api/?query=paris
+
+***Response :***
+```json
+{
+  "count": 1,
+  "data": [
+    {
+      "name": "Fabernovel Paris",
+      "description": "Cupcake ipsum dolor",
+      "employees_count": 350,
+      "open_date": "01/06/2019",
+      "location": {
+        "city": "Paris",
+        "number": "46",
+        "address": "rue de Saint Lazare",
+        "postal_code": "75009",
+        "country": "France",
+        "language": ["fr", "en"],
+        "continent": {
+          "label": "Europe",
+          "key": "europe"
+        }
+      },
+      "remote_available": true
+    }
+  ]
+}
+```
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
