@@ -33,7 +33,7 @@ class App extends React.Component<{}, AppState> {
       return office.location.continent
     })
     return [...continentList, {
-      key: "",
+      key: "*",
       label: "World"
     }
     ]
@@ -59,7 +59,7 @@ class App extends React.Component<{}, AppState> {
       continentSelected: continent,
       offices: {
         count: officesFiltered.length,
-        data: (continent.key !== "") ? officesFiltered : this.initialList.data
+        data: (continent.key !== "*") ? officesFiltered : this.initialList.data
       }
     })
   }

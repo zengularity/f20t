@@ -19,7 +19,7 @@ class Dropdown extends React.Component<props, {}> {
     return (
       <div className={styles.item} key={index} 
         onClick={() => { 
-          this.props.onChangeContinent({ "key": continent.key, "label": continent.label })
+          this.props.onChangeContinent(continent)
           this.setState({displayList: false})
         }}>
         {continent.label}
