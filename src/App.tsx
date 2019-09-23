@@ -30,12 +30,19 @@ class App extends React.Component<{}, AppState> {
     const continentList = offices.data.map((office: Office) => {
       return office.location.continent;
     });
+
     return [
-      ...continentList,
       {
         key: "*",
         label: "World"
-      }
+      },
+      ...continentList.filter((continent, index) => {
+        return (
+          continentList.findIndex(
+            continentObject => continentObject.key === continent.key
+          ) === index
+        );
+      })
     ];
   };
 
