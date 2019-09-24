@@ -1,0 +1,49 @@
+.search {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 12px 16px;
+  z-index: 0;
+
+  .searchInput {
+    flex: 1;
+    appearance: none;
+    border: 1px solid black;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+
+    &::placeholder {
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: #666;
+    }
+  }
+
+  .searchButton {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover ~ .buttonVector {
+      transform: scale(1.1) rotate(10deg);
+    }
+  }
+
+  .searchIcon {
+    flex-shrink: 0;
+    width: 24px;
+    margin: 0 12px;
+  }
+
+  .buttonVector {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    z-index: -1;
+    width: auto;
+    height: 70px;
+  }
+}

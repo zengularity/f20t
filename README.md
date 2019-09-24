@@ -14,33 +14,14 @@ query  (optional string)
 
 ***Exemple :***
 
-http://fake.fabernovel.com/api/?query=paris
+`http://fake.fabernovel.com/api/offices?query=paris`
 
 ***Response :***
+
 ```json
-OfficeSearch :{
-  "count": 1,
-  "data": [
-    {
-      "name": "Fabernovel Paris",
-      "description": "Cupcake ipsum dolor",
-      "employees_count": 350,
-      "open_date": "01/06/2019",
-      "location": {
-        "city": "Paris",
-        "number": "46",
-        "address": "rue de Saint Lazare",
-        "postal_code": "75009",
-        "country": "France",
-        "language": ["fr", "en"],
-        "continent": {
-          "label": "Europe",
-          "key": "europe"
-        }
-      },
-      "remote_available": true
-    }
-  ]
+OfficeSearch : {
+  "count": number,
+  "data": Office[]
 }
 ```
 
