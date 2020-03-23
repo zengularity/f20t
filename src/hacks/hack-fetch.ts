@@ -12,7 +12,7 @@ const originalFetch = window.fetch;
 
 type CustomFetch = (url: string, config?: RequestInit) => Promise<Response>;
 
-const isApi = (
+const isFakeApi = (
   endpoint: string,
   method: string = "GET",
   queryStringParam?: string
@@ -30,71 +30,56 @@ const isApi = (
   );
 };
 
-type FakeResponse = {
-  test: (url: string, config?: RequestInit) => boolean;
-  handler: CustomFetch;
-};
+async function fakeFetch(url: string, config?: RequestInit): Promise<Response> {
+  await sleep();
+  const { query } = qs.parse(new window.URL(url).search) as {
+    query?: string;
+  };
+  let matches: OfficeSearch | undefined = undefined;
 
-const fakeResponses: Array<FakeResponse> = [
-  {
-    test: isApi("offices", "GET"),
-    async handler(url) {
-      await sleep();
-      const { query } = qs.parse(new window.URL(url).search) as {
-        query?: string;
-      };
-      let matches: OfficeSearch | undefined = undefined;
-
-      if (query) {
-        matches = searchOffices(dataOffices, query);
-      } else {
-        matches = dataOffices;
-      }
-      return {
-        status: 200,
-        json: async () => matches
-      } as Response;
-    }
-  },
-  {
-    test: () => true,
-    handler: (url, config) => originalFetch(url, config)
+  if (query) {
+    matches = searchOffices(dataOffices, query);
+  } else {
+    matches = dataOffices;
   }
-];
+
+  return new Promise(resolve => {
+    resolve({
+      status: 200,
+      json: async () => matches
+    } as Response);
+  });
+}
 
 const fetch: CustomFetch = async (url: string, config?: RequestInit) => {
-  const { handler } = fakeResponses.find(({ test }) => {
+  if (isFakeApi(url, "GET")) {
+    const groupTitle = `%c ${(config || {}).method || "GET"} -> ${url}`;
     try {
-      return test(url, config);
+      const response = await fakeFetch(url, config);
+      console.groupCollapsed(groupTitle, "color: #0f9d58");
+      console.info("REQUEST:", { url, ...config });
+      console.info("RESPONSE:", {
+        ...response,
+        ...(response.json ? { json: await response.json() } : {})
+      });
+      console.groupEnd();
+      return response;
     } catch (error) {
-      return false;
+      let rejection = error;
+      if (error instanceof Error) {
+        rejection = {
+          status: 500,
+          message: error.message
+        };
+      }
+      console.groupCollapsed(groupTitle, "color: #ef5350");
+      console.info("REQUEST:", { url, ...config });
+      console.info("REJECTION:", rejection);
+      console.groupEnd();
+      return Promise.reject(rejection);
     }
-  }) as FakeResponse;
-
-  const groupTitle = `%c ${(config || {}).method || "GET"} -> ${url}`;
-  try {
-    const response = await handler(url, config);
-    console.groupCollapsed(groupTitle, "color: #0f9d58");
-    console.info("REQUEST:", { url, ...config });
-    console.info("RESPONSE:", {
-      ...response,
-      ...(response.json ? { json: await response.json() } : {})
-    });
-    console.groupEnd();
-    return response;
-  } catch (error) {
-    let rejection = error;
-    if (error instanceof Error) {
-      rejection = {
-        status: 500,
-        message: error.message
-      };
-    }
-    console.groupCollapsed(groupTitle, "color: #ef5350");
-    console.info("REQUEST:", { url, ...config });
-    console.info("REJECTION:", rejection);
-    console.groupEnd();
-    return Promise.reject(rejection);
+  } else {
+    return originalFetch(url, config);
   }
 };
 
