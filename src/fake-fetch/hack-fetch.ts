@@ -8,8 +8,6 @@ const sleep = (t = Math.random() * 200 + 300) =>
 
 const apiUrl = new window.URL("http://fake.fabernovel.com/api");
 
-const originalFetch = window.fetch;
-
 type CustomFetch = (url: string, config?: RequestInit) => Promise<Response>;
 
 const isFakeApi = (
@@ -30,7 +28,7 @@ const isFakeApi = (
   );
 };
 
-async function fakeFetch(url: string, config?: RequestInit): Promise<Response> {
+async function fakeAPI(url: string, config?: RequestInit): Promise<Response> {
   await sleep();
   const { query } = qs.parse(new window.URL(url).search) as {
     query?: string;
@@ -51,11 +49,11 @@ async function fakeFetch(url: string, config?: RequestInit): Promise<Response> {
   });
 }
 
-const fetch: CustomFetch = async (url: string, config?: RequestInit) => {
+export const fetch: CustomFetch = async (url: string, config?: RequestInit) => {
   if (isFakeApi(url, "GET")) {
     const groupTitle = `%c ${(config || {}).method || "GET"} -> ${url}`;
     try {
-      const response = await fakeFetch(url, config);
+      const response = await fakeAPI(url, config);
       console.groupCollapsed(groupTitle, "color: #0f9d58");
       console.info("REQUEST:", { url, ...config });
       console.info("RESPONSE:", {
@@ -79,9 +77,8 @@ const fetch: CustomFetch = async (url: string, config?: RequestInit) => {
       return Promise.reject(rejection);
     }
   } else {
-    return originalFetch(url, config);
+    throw new Error(
+      `Cannot use fakeFetch anywhere else than for ${apiUrl.href}`
+    );
   }
 };
-
-// @ts-ignore
-window.fetch = fetch;
